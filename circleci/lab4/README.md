@@ -11,7 +11,7 @@ I recommend signing up using your GitHub account as it links everything up
 
 
 ### Lab part 2
-Now we are going to create a very simple workflow to run a Packer validate and build
+Now we are going to create a very simple workflow to run a Packer validate and build, and create the image on AWS
 
 1. Create a new GitHub repository called *circleci-lab4*
 2. Clone the repository to your laptop
