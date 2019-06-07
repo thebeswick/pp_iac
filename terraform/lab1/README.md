@@ -10,6 +10,7 @@
 6. Validate the config
 `terraform validate`
 7. Now run terraform plan, and check the resulting output as per the example below
+
 `terraform plan`
 ```    Refreshing Terraform state in-memory prior to plan...
     The refreshed state will be used to calculate this plan, but will not be
