@@ -25,7 +25,9 @@ git add .
 git commit -m "my 1st circleci build"
 git push origin
 ```
-7. Go to CircleCI console and set up the project and run it, assuming it runs successfully you should see the build, validation complete
+7. Go to CircleCI console and set up the project from the add projects meu item on the left panel and click on the ![setup project](https://raw.githubusercontent.com/thebeswick/pp_iac_labs/master/images/setup_project.PNG)  
+8. You will need to enter your AWS credentials into CircleCI. Go to the jobs menu and select the
+ assuming it runs successfully you should see the build, validation complete
 8. Check in the AWS console and check Instance, Snap and AMI completes as you would expect
 9. Now try git branching
 ```bash
