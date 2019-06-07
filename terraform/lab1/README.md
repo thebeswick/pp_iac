@@ -187,15 +187,14 @@
 15. To correct this we will edit the resources.tf file and add an ingress rule (inbound) to the "sg_iac_demo" resource (see lines below)
 ```json
       ingress {
-        # SSH (change to whatever ports you need)
         from_port   = 80
         to_port     = 80
         protocol    = "tcp"
-        cidr_blocks =  [ "0.0.0.0/0" ] # add a CIDR block here
+        cidr_blocks =  [ "0.0.0.0/0" ]
       }
 ```
 16. Rerun the terraform validate, plan and apply commands and review how terraform handles the required changes
 17. Verify that you can now wget from the local terminal (i.e. over the internet)
 18. You can now blow away the entire environment using the terraform destroy command
 
-###End of Lab 2
+### End of Lab 2

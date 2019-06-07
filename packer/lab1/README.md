@@ -1,4 +1,4 @@
-### Lab 1 Packer
+# Lab 1 Packer
 
 1.  Install Chocolatey Windows package manager from https://chocolatey.org/
 	* I used the Powershell method to install (remember to run Powershell as Administrator)
@@ -17,4 +17,4 @@
 9.  Go into the AWS EC2 console and review whats happening with the build process, through the "Instances", "Volumes" and "Snapshots" in the left hand panel
 10.  Review the resulting output and record the generated AMI name, we will use this in the next lab
 
-###End of Lab 1
+# End of Lab 1

@@ -57,7 +57,7 @@ resource "aws_vpc" "vpc_iac_demo" {
 resource "aws_subnet" "sub_pub_iac_demo" {
   vpc_id     = "${aws_vpc.vpc_iac_demo.id}"
   cidr_block = "10.0.0.0/16"
-  map_public_ip_on_launch = true 
+  map_public_ip_on_launch = true
 
   tags = {
     Name = "sub_pub_iac_demo"
@@ -75,7 +75,7 @@ resource "aws_route_table" "rt_iac_demo" {
   tags = {
     Name = "rt_iac_demo"
   }
-} 
+}
 
 # Create the Security Group - EC2 console
 resource "aws_security_group" "sg_iac_demo" {
@@ -87,13 +87,6 @@ resource "aws_security_group" "sg_iac_demo" {
     # SSH (change to whatever ports you need)
     from_port   = 22
     to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks =  [ "0.0.0.0/0" ] # add a CIDR block here
-  }
-  ingress {
-    # SSH (change to whatever ports you need)
-    from_port   = 80
-    to_port     = 80
     protocol    = "tcp"
     cidr_blocks =  [ "0.0.0.0/0" ] # add a CIDR block here
   }
@@ -109,4 +102,3 @@ resource "aws_route_table_association" "iac-public-1-a" {
     subnet_id = "${aws_subnet.sub_pub_iac_demo.id}"
     route_table_id = "${aws_route_table.rt_iac_demo.id}"
 }
-
