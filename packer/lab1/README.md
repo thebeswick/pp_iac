@@ -1,3 +1,4 @@
+![Packer Logo](https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.00Szk8u9z_YfutYcXKhXwAAAAA%26pid%3DApi&f=1)
 # Lab 1 Packer
 
 1.  Install Chocolatey Windows package manager from https://chocolatey.org/
