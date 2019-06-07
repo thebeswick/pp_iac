@@ -1,4 +1,5 @@
-### Getting Started with Terraform
+![Terraform Logo](https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.packet.com%2Fmedia%2Fpages%2Fimages%2F0f49c89d1e7298bb9930789c8ed59d48%2F3K3l-terraform.400x400_350.png&f=1)
+# Lab 2 Getting Started with Terraform
 
 1.  Install Terraform with Chocolatey
 `choco install terraform`
@@ -197,4 +198,4 @@
 17. Verify that you can now wget from the local terminal (i.e. over the internet)
 18. You can now blow away the entire environment using the terraform destroy command
 
-### End of Lab 2
+# End of Lab 2

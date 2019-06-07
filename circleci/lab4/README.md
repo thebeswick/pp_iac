@@ -2,7 +2,7 @@
 # Lab 4 CircleCI
 
 In this lab we'll get up and running with CircleCI by running through their "Hello World" Tutoral.
-You'll need your AWS and GitHub :octocat: credentials as we'll be deploying Packer images through CircleCI
+You'll need your AWS :cloud: and GitHub :octocat: credentials as we'll be deploying Packer images through CircleCI
 
 1. Go to the CircleCI and sign up for a [free account](https://circleci.com/signup/)
 I recommend signing up using your GitHub account as it links everything up
@@ -16,7 +16,7 @@ Now we are going to create a very simple workflow to run a Packer validate and b
 1. Create a new GitHub repository called *circleci-lab4*
 2. Clone the repository to your laptop
 3. Go into the *circleci-lab4* and create two directories *.circleci* and *packer*
-4. Copy the file from the *pp_iac_labs/lab4/build.json* into the *cirecle-ci/packer* directory
+4. Copy the file from the *pp_iac_labs/packer/lab1/lab1.json* into *cirecle-ci/packer/build.json* directory
 5. Copy the *config.yml* file from *pp_iac_labs/circleci/lab4* to *.circleci*
 6. Use git to update the remote repository
 

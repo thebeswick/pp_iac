@@ -1,3 +1,4 @@
+![Terraform Logo](https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.packet.com%2Fmedia%2Fpages%2Fimages%2F0f49c89d1e7298bb9930789c8ed59d48%2F3K3l-terraform.400x400_350.png&f=1)
 # Lab 3 Terraform modules
 
 In this lab we'll deploy a ready made module from the Terraform registry
@@ -8,7 +9,7 @@ https://registry.terraform.io/modules/hashicorp/vault/aws/0.12.2 -
 
 1. Go to the Vault registry module  https://registry.terraform.io/modules/hashicorp/vault/aws/0.12.2
 2. Copy the "Provision instructions" code into your favourite code editor and add the variables below and save it to a file myvault_lab/main.cf
-```
+```yaml
 vault_domain_name = myvault.example.com
 ssh_key_name = iac_demo
 create_dns_entry = 0
