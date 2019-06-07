@@ -1,3 +1,4 @@
+![CircleCI Logo](https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/kwaxnksiclrrzxan1qqu)
 # Lab 4 CircleCI
 
 In this lab we'll get up and running with CircleCI by running through their "Hello World" Tutoral.
