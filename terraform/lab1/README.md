@@ -172,8 +172,7 @@
     Note: You didn't specify an "-out" parameter to save this plan, so Terraform
     can't guarantee that exactly these actions will be performed if
     "terraform apply" is subsequently run.
-
-    ```
+```
 
 8.  Review the plan output and look out for any errors or warning and also try and follow what will get deployed when we apply the configuration to AWS
 9. Now deploy the configuration to AWS
@@ -186,6 +185,7 @@
 `wget localhost`
 14. Now if you try to wget the public_dns name from a local terminal, you should see it fail because port 80 has not been declared in the Inbound rules of the EC2 security group "sg_iac_demo"
 15. To correct this we will edit the resources.tf file and add an ingress rule (inbound) to the "sg_iac_demo" resource (see lines below)
+```json
       ingress {
         # SSH (change to whatever ports you need)
         from_port   = 80
@@ -193,6 +193,7 @@
         protocol    = "tcp"
         cidr_blocks =  [ "0.0.0.0/0" ] # add a CIDR block here
       }
+```
 16. Rerun the terraform validate, plan and apply commands and review how terraform handles the required changes
 17. Verify that you can now wget from the local terminal (i.e. over the internet)
 18. You can now blow away the entire environment using the terraform destroy command
