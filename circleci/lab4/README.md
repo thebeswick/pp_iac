@@ -11,21 +11,22 @@ I recommend signing up using your GitHub account as it links everything up
 
 ### Lab part 2
 Now we are going to create a very simple workflow to run a Packer validate and build
-3. Create a new GitHub repository called *circleci-lab4*
-4. Clone the repository to your laptop
-5. Go into the *circleci-lab4* and create two directories *.circleci* and *packer*
-6. Copy the *lab1.json* file from the *pp_iac_labs/packer/lab1.json* into the *packer* directory
-7. Copy the *config.yml* file from *pp_iac_labs/packer/circleci* to *.circleci*
-8. Use git to update the remote repository
+
+1. Create a new GitHub repository called *circleci-lab4*
+2. Clone the repository to your laptop
+3. Go into the *circleci-lab4* and create two directories *.circleci* and *packer*
+4. Copy the *lab1.json* file from the *pp_iac_labs/packer/lab1.json* into the *packer* directory
+5. Copy the *config.yml* file from *pp_iac_labs/packer/circleci* to *.circleci*
+6. Use git to update the remote repository
 
 ```bash
 git add .
 git commit -m "my 1st circleci build"
 git push origin
 ```
-9. Go to CircleCI console and set up the project and run it, assuming it runs successfully you should see the build, validation complete
-10. Check in the AWS console and check Instance, Snap and AMI completes as you would expect
-11. Now try git branching
+7. Go to CircleCI console and set up the project and run it, assuming it runs successfully you should see the build, validation complete
+8. Check in the AWS console and check Instance, Snap and AMI completes as you would expect
+9. Now try git branching
 ```bash
 git checkout -b mytest
 git push origin mytest
