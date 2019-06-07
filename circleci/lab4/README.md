@@ -2,7 +2,7 @@
 # Lab 4 CircleCI
 
 In this lab we'll get up and running with CircleCI by running through their "Hello World" Tutoral.
-You'll need your AWS and GitHub credentials as we'll be deploying Packer images through CircleCI
+You'll need your AWS and GitHub :bowtie: credentials as we'll be deploying Packer images through CircleCI
 
 1. Go to the CircleCI and sign up for a [free account](https://circleci.com/signup/)
 I recommend signing up using your GitHub account as it links everything up
