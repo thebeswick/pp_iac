@@ -172,6 +172,7 @@
     Note: You didn't specify an "-out" parameter to save this plan, so Terraform
     can't guarantee that exactly these actions will be performed if
     "terraform apply" is subsequently run.
+
     ```
 
 8.  Review the plan output and look out for any errors or warning and also try and follow what will get deployed when we apply the configuration to AWS
