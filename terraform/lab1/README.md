@@ -9,17 +9,17 @@
 `terraform init`
 6. Validate the config
 `terraform validate`
-7. Now run terraform plan, and check the reluting output as per the example below
+7. Now run terraform plan, and check the resulting output as per the example below
 `terraform plan`
-`    Refreshing Terraform state in-memory prior to plan...
+<    Refreshing Terraform state in-memory prior to plan...
     The refreshed state will be used to calculate this plan, but will not be
     persisted to local or remote state storage.
     ------------------------------------------------------------------------
     An execution plan has been generated and is shown below.
     Resource actions are indicated with the following symbols:
-      + create
+        create
     Terraform will perform the following actions:
-      + aws_ebs_volume.iac_ebs_volume
+        aws_ebs_volume.iac_ebs_volume
           id:                                          <computed>
           arn:                                         <computed>
           availability_zone:                           "${aws_subnet.sub_pub_iac_demo.availability_zone}"
@@ -31,7 +31,7 @@
           tags.%:                                      "1"
           tags.Name:                                   "iac-EBS-volume"
           type:                                        <computed>
-      + aws_instance.iac_ec2_instance
+        aws_instance.iac_ec2_instance
           id:                                          <computed>
           ami:                                         "ami-001dae151248753a2"
           arn:                                         <computed>
@@ -67,13 +67,13 @@
           user_data:                                   "5fcfa9f44583d02ee1a94afb5562ea441e95f0f2"
           volume_tags.%:                               <computed>
           vpc_security_group_ids.#:                    <computed>
-      + aws_internet_gateway.ig_iac_demo
+        aws_internet_gateway.ig_iac_demo
           id:                                          <computed>
           owner_id:                                    <computed>
           tags.%:                                      "1"
           tags.Name:                                   "ig_iac_demo"
           vpc_id:                                      "${aws_vpc.vpc_iac_demo.id}"
-      + aws_route_table.rt_iac_demo
+        aws_route_table.rt_iac_demo
           id:                                          <computed>
           owner_id:                                    <computed>
           propagating_vgws.#:                          <computed>
@@ -90,11 +90,11 @@
           tags.%:                                      "1"
           tags.Name:                                   "rt_iac_demo"
           vpc_id:                                      "${aws_vpc.vpc_iac_demo.id}"
-      + aws_route_table_association.iac-public-1-a
+        aws_route_table_association.iac-public-1-a
           id:                                          <computed>
           route_table_id:                              "${aws_route_table.rt_iac_demo.id}"
           subnet_id:                                   "${aws_subnet.sub_pub_iac_demo.id}"
-      + aws_security_group.sg_iac_demo
+        aws_security_group.sg_iac_demo
           id:                                          <computed>
           arn:                                         <computed>
           description:                                 "Allow SSH inbound traffic"
@@ -124,7 +124,7 @@
           owner_id:                                    <computed>
           revoke_rules_on_delete:                      "false"
           vpc_id:                                      "${aws_vpc.vpc_iac_demo.id}"
-      + aws_subnet.sub_pub_iac_demo
+        aws_subnet.sub_pub_iac_demo
           id:                                          <computed>
           arn:                                         <computed>
           assign_ipv6_address_on_creation:             "false"
@@ -138,13 +138,13 @@
           tags.%:                                      "1"
           tags.Name:                                   "sub_pub_iac_demo"
           vpc_id:                                      "${aws_vpc.vpc_iac_demo.id}"
-      + aws_volume_attachment.iac_vol_attachment
+        aws_volume_attachment.iac_vol_attachment
           id:                                          <computed>
           device_name:                                 "/dev/xvdh"
           force_detach:                                "true"
           instance_id:                                 "${aws_instance.iac_ec2_instance.id}"
           volume_id:                                   "${aws_ebs_volume.iac_ebs_volume.id}"
-      + aws_vpc.vpc_iac_demo
+        aws_vpc.vpc_iac_demo
           id:                                          <computed>
           arn:                                         <computed>
           assign_generated_ipv6_cidr_block:            "false"
@@ -168,7 +168,7 @@
     ------------------------------------------------------------------------
     Note: You didn't specify an "-out" parameter to save this plan, so Terraform
     can't guarantee that exactly these actions will be performed if
-    "terraform apply" is subsequently run.`
+    "terraform apply" is subsequently run.>
 
 8.  Review the plan output and look out for any errors or warning and also try and follow what will get deployed when we apply the configuration to AWS
 9. Now deploy the configuration to AWS
