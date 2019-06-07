@@ -12,6 +12,7 @@
 7. Now run terraform plan, and check the resulting output as per the example below
 
 `terraform plan`
+
 ```    Refreshing Terraform state in-memory prior to plan...
     The refreshed state will be used to calculate this plan, but will not be
     persisted to local or remote state storage.
@@ -169,7 +170,8 @@
     ------------------------------------------------------------------------
     Note: You didn't specify an "-out" parameter to save this plan, so Terraform
     can't guarantee that exactly these actions will be performed if
-    "terraform apply" is subsequently run. ```
+    "terraform apply" is subsequently run.
+    ```
 
 8.  Review the plan output and look out for any errors or warning and also try and follow what will get deployed when we apply the configuration to AWS
 9. Now deploy the configuration to AWS
