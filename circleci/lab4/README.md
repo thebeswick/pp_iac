@@ -25,14 +25,17 @@ git add .
 git commit -m "my 1st circleci build"
 git push origin
 ```
-7. Go to CircleCI console and set up the project from the add projects meu item on the left panel and click on the ![setup project](https://raw.githubusercontent.com/thebeswick/pp_iac_labs/master/images/setup_project.jpg)  
-8. You will need to enter your AWS credentials into CircleCI. Go to the jobs menu and select the
- assuming it runs successfully you should see the build, validation complete
-8. Check in the AWS console and check Instance, Snap and AMI completes as you would expect
-9. Now try git branching
+7. Go to CircleCI console and set up the project from the add projects meu item on the left panel and click on   
+ ![setup project](../../images/setup_project.PNG)  
+8. You will need to enter your AWS credentials into CircleCI. Go to the jobs menu and select the settings
+![lab4 settings](../../images/lab4_settings.PNG)
+Enter your AWS permissions and also set an Environment Variable for the *AWS_DEFAULT_REGION* to *ap-southeast-2*
+9. You should now be able to run the job and make sure it completes sucessfully.
+10. Check in the AWS console and check Instance, Snap and AMI completes as you would expect.
+11. Now try git branching
 ```bash
 git checkout -b mytest
 git push origin mytest
 ```
-
+Notice that this aytomatically kickoffs another job in CircleCI
 # End of Lab 4
