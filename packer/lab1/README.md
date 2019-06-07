@@ -10,7 +10,7 @@
 5. Navigate to the packer/src/lab1 directory
 6. Review the contents of the lab1.json file from the Github repo, and try and follow what will happen
 7. Ensure that you have the following environment Variables set, you can of course use a different region if you prefer
-[![Environment Variables](https://github.com/thebeswick/pp_iac_labs/images/env_variables.png "Environment Variables")](https://github.com/thebeswick/pp_iac_labs/images/env_variables.png)
+[![Environment Variables](https://github.com/thebeswick/pp_iac_labs/tree/master/images/env_variables.png "Environment Variables")](https://github.com/thebeswick/pp_iac_labs/tree/master/images/env_variables.png)
 8. Use Packer to validate and build
 `packer validate ex1_lab1.json`
 `packer build ex1_lab1.json`
