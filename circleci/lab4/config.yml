@@ -10,9 +10,9 @@ jobs:
           name: check packer version
           command: packer version
       - run:
-          name: Validate snowflake
+          name: Validate Packer Build File
           command: packer validate ./packer/build.json
-  build-snowflake:
+  build-image:
     docker:
       - image: hashicorp/packer:1.1.1
     working_directory: ~/packer
@@ -21,7 +21,7 @@ jobs:
       - attach_workspace:
           at: ~/packer
       - run:
-          name: Build snowflake
+          name: Build Packer Image
           command: packer build ./packer/build.json
       - store_artifacts:
           path: manifest-snowflake.json
@@ -30,6 +30,6 @@ workflows:
   build-and-deploy:
     jobs:
       - validate
-      - build-snowflake:
+      - build-image:
           requires:
             - validate
