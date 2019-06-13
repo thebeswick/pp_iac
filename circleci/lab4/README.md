@@ -30,14 +30,14 @@ git push origin
 8. You will need to enter your AWS credentials into CircleCI. Go to the jobs menu and select the settings
 ![lab4 settings](../../images/lab4_settings.PNG)
 9. Enter your AWS permissions and also set an Environment Variable for the *AWS_DEFAULT_REGION* to *ap-southeast-2*
-10. You should now be able to run the job and make sure it completes sucessfully.
+10. You should now be able to run the job and make sure it completes successfully.
 11. Check in the AWS console and check Instance, Snap and AMI completes as you would expect.
 12. Now try git branching
 ```bash
 git checkout -b mytest
 git push origin mytest
 ```
-Notice that this automatically kickoffs another job in CircleCI
+Notice that this should automatically kickoffs another job in CircleCI
 
 13. If time permits, complete the CircleCI tutorial started in step 2
 # End of Lab 4
