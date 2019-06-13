@@ -16,8 +16,8 @@ Now we are going to create a very simple workflow to run a Packer validate and b
 1. Create a new GitHub repository called *circleci-lab4*
 2. Clone the repository to your laptop
 3. Go into the *circleci-lab4* and create two directories *.circleci* and *packer*
-4. Copy the file from the *pp_iac_labs/packer/lab1/lab1.json* into *cirecle-ci/packer/build.json* directory
-5. Copy the *config.yml* file from *pp_iac_labs/circleci/lab4* to *.circleci*
+4. Copy the file from the ```pp_iac_labs/packer/lab1/lab1.json``` into ```circcle-ci/packer/build.json``` directory
+5. Copy the ```config.yml``` file from ```pp_iac_labs/circleci/lab4``` to the ```.circleci``` directory
 6. Use git to update the remote repository
 
 ```bash
