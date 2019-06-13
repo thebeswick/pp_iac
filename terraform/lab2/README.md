@@ -196,6 +196,6 @@
 ```
 16. Rerun the terraform validate, plan and apply commands and review how terraform handles the required changes
 17. Verify that you can now wget from the local terminal (i.e. over the internet)
-18. You can now blow away the entire environment using the terraform destroy command
+18. Review the contents of the terraform.tfstate file
 
 # End of Lab 2
