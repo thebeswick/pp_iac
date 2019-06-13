@@ -1,7 +1,7 @@
 ![CircleCI Logo](https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/kwaxnksiclrrzxan1qqu)
 # Lab 4 CircleCI
 
-In this lab we'll get up and running with CircleCI by running through their "Hello World" Tutoral.
+In this lab we'll get up and running with CircleCI by running through their "Hello World" Tutorial.
 You'll need your AWS :cloud: and GitHub :octocat: credentials as we'll be deploying Packer images through CircleCI
 
 1. Go to the CircleCI and sign up for a [free account](https://circleci.com/signup/)
