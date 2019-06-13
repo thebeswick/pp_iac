@@ -197,5 +197,6 @@
 16. Rerun the terraform validate, plan and apply commands and review how terraform handles the required changes
 17. Verify that you can now wget from the local terminal (i.e. over the internet)
 18. Review the contents of the terraform.tfstate file
+19. Now try adding a new instance to the resources.tf file
 
 # End of Lab 2
