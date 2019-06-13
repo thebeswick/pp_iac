@@ -38,5 +38,6 @@ git checkout -b mytest
 git push origin mytest
 ```
 Notice that this automatically kickoffs another job in CircleCI
+
 13. If time permits, complete the CircleCI tutorial started in step 2
 # End of Lab 4
