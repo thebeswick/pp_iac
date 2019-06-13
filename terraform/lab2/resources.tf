@@ -1,6 +1,6 @@
 # Create the EC2 instance - EC2 console
 resource "aws_instance" "iac_ec2_instance" {
- ami               = "ami-0b41a13979c7a8fa0"
+ ami               = "ami-08586e874d2dde4e4"
  availability_zone = "${aws_subnet.sub_pub_iac_demo.availability_zone}"
  instance_type     = "${var.instance_type}"
 

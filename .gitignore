@@ -1,0 +1,3 @@
+# Ignore Terraform init directory and state
+.terraform
+*.tfstate*
