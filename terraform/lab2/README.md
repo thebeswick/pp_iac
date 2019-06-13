@@ -186,7 +186,7 @@
 `wget localhost`
 14. Now if you try to wget the public_dns name from a local terminal, you should see it fail because port 80 has not been declared in the Inbound rules of the EC2 security group "sg_iac_demo"
 15. To correct this we will edit the resources.tf file and add an ingress rule (inbound) to the "sg_iac_demo" resource (see lines below)
-```json
+```yaml
       ingress {
         from_port   = 80
         to_port     = 80
