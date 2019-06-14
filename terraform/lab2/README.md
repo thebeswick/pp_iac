@@ -196,7 +196,7 @@
       }
 ```
 17. Rerun the terraform validate, plan and apply commands and review how terraform handles the required changes
-18. Verify that you can now wget from the local terminal (i.e. over the internet)
+18. Verify that you can now wget from the local terminal (i.e. over the internet) using the new instance DNS created as a result of the change or use your browser
 19. Review the contents of the terraform.tfstate file
 20. Now try adding a new instance to the resources.tf file
 
