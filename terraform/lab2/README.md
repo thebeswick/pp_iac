@@ -3,14 +3,15 @@
 
 1.  Install Terraform with Chocolatey
 `choco install terraform`
-2. Go in to your AWS EC2 console and create a "Key Pair"  called "iac_demo", then relocate the download "iac_demo.pem" from your downloads directory to  C:\Users\<username>\.ssh (create the .ssh directory if necessary). Note that terraform picks up the AWS credentials from environment variables.
+2. Go in to your AWS EC2 console and create a "Key Pair"  called "iac_demo", then relocate the download "iac_demo.pem" from your downloads directory to  ```C:\Users\<username>\.ssh``` (create the .ssh directory if necessary). Note that terraform picks up the AWS credentials from environment variables.
 3. Open a Git bash window and navigate to the terraform/lab1 dir in the github repo downloaded inPacker lab
-4. Inspect the contents of each of the .cf files, terraform will parse every file in the directory that has a .tf extension
-5. Initialise terraform
-`terraform init`
-6. Validate the config
+4. Inspect the contents of each of the .cf files, terraform will parse every file in the directory that has a .cf extension
+5. Edit the ```resources.tf``` and change the AMI name to the AMI name you created with Packer in lab1
+6. Initialise terraform
+```terraform init```
+7. Validate the config
 `terraform validate`
-7. Now run terraform plan, and check the resulting output as per the example below
+8. Now run terraform plan, and check the resulting output as per the example below
 
 `terraform plan`
 
@@ -175,17 +176,17 @@
     "terraform apply" is subsequently run.
 ```
 
-8.  Review the plan output and look out for any errors or warning and also try and follow what will get deployed when we apply the configuration to AWS
-9. Now deploy the configuration to AWS
-`terraform deply -auto-approve`
-10. You should see terraform working through the configuration elements and you can also follow the infrastructure spinning up in the AWS EC2 console and AWS VPC console. I recommend opening a browser window/tab for each
-11. Once apply has completed identify the public_dns name the terraform apply command (or use "terraform show | grep public_dns") or go through the EC2 console to get public_dns from the Instances menu
-12. Try ssh'ing into the EC2 instance
+9.  Review the plan output and look out for any errors or warning and also try and follow what will get deployed when we apply the configuration to AWS
+10. Now deploy the configuration to AWS
+```terraform apply -auto-approve```
+11. You should see terraform working through the configuration elements and you can also follow the infrastructure spinning up in the AWS EC2 console and AWS VPC console. I recommend opening a browser window/tab for each
+12. Once apply has completed identify the public_dns name the terraform apply command (or use "terraform show | grep public_dns") or go through the EC2 console to get public_dns from the Instances menu
+13. Try ssh'ing into the EC2 instance
 `ssh -i ~/.ssh/iac_demo.pem ubuntu@<public_dns>`
-13. In the Packer lab we created an image that has the nginx web server installed by default, to test this when logged into the instance run the following command. You should see wget save the file to index.html
-`wget localhost`
-14. Now if you try to wget the public_dns name from a local terminal, you should see it fail because port 80 has not been declared in the Inbound rules of the EC2 security group "sg_iac_demo"
-15. To correct this we will edit the resources.tf file and add an ingress rule (inbound) to the "sg_iac_demo" resource (see lines below)
+14. In the Packer lab we created an image that has the nginx web server installed by default, to test this when logged into the instance run the following command. You should see wget save the file to index.html
+```wget localhost```
+15. Now if you try to wget the public_dns name from a local terminal, you should see it fail because port 80 has not been declared in the Inbound rules of the EC2 security group "sg_iac_demo"
+16. To correct this we will edit the resources.tf file and add an ingress rule (inbound) to the "sg_iac_demo" resource (see lines below)
 ```yaml
       ingress {
         from_port   = 80
@@ -194,9 +195,9 @@
         cidr_blocks =  [ "0.0.0.0/0" ]
       }
 ```
-16. Rerun the terraform validate, plan and apply commands and review how terraform handles the required changes
-17. Verify that you can now wget from the local terminal (i.e. over the internet)
-18. Review the contents of the terraform.tfstate file
-19. Now try adding a new instance to the resources.tf file
+17. Rerun the terraform validate, plan and apply commands and review how terraform handles the required changes
+18. Verify that you can now wget from the local terminal (i.e. over the internet)
+19. Review the contents of the terraform.tfstate file
+20. Now try adding a new instance to the resources.tf file
 
 # End of Lab 2

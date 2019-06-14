@@ -48,9 +48,6 @@ resource "aws_vpc" "vpc_iac_demo" {
   instance_tenancy = "default"
   enable_dns_hostnames = true
 
-  tags = {
-    Name = "vpc_iac_demo"
-  }
 }
 
 # Create the Subnet - VPC console
@@ -59,9 +56,6 @@ resource "aws_subnet" "sub_pub_iac_demo" {
   cidr_block = "10.0.0.0/16"
   map_public_ip_on_launch = true
 
-  tags = {
-    Name = "sub_pub_iac_demo"
-  }
 }
 
 # Create the Route Table - VPC console
