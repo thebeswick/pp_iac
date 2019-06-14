@@ -8,14 +8,14 @@
 `choco install packer`
 3. Fork the following Github repo https://github.com/thebeswick/pp_iac_labs.git
 4. Clone your newly forked repo with "git clone"
-5. Navigate to the packer/src/lab1 directory
+5. Navigate to the ```packer/lab1 directory```
 6. Review the contents of the lab1.json file from the Github repo, and try and follow what will happen
 7. Ensure that you have the following environment Variables set, you can of course use a different region if you prefer
 ![Environment variables](https://raw.githubusercontent.com/thebeswick/pp_iac_labs/master/images/env_variables.png "Environment variables")
 8. Use Packer to validate and build
 `packer validate ex1_lab1.json`
 `packer build ex1_lab1.json`
-9.  Go into the AWS EC2 console and review whats happening with the build process, through the "Instances", "Volumes" and "Snapshots" in the left hand panel
+9.  Go into the AWS EC2 console and review what's happening with the build process, through the "Instances", "Volumes" and "Snapshots" in the left hand panel
 10.  Review the resulting output and record the generated AMI name, we will use this in the next lab
 
 # End of Lab 1
