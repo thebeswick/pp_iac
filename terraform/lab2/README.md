@@ -4,7 +4,7 @@
 1.  Install Terraform with Chocolatey
 `choco install terraform`
 2. Go in to your AWS EC2 console and create a "Key Pair"  called "iac_demo", then relocate the download "iac_demo.pem" from your downloads directory to  ```C:\Users\<username>\.ssh``` (create the .ssh directory if necessary). Note that terraform picks up the AWS credentials from environment variables.
-3. Open a Git bash window and navigate to the terraform/lab1 dir in the github repo downloaded inPacker lab
+3. Open a Git bash window and navigate to the terraform/lab1 dir in the github repo you downloaded in the Packer lab
 4. Inspect the contents of each of the .cf files, terraform will parse every file in the directory that has a .cf extension
 5. Edit the ```resources.tf``` and change the AMI name to the AMI name you created with Packer in lab1
 6. Initialise terraform
@@ -180,9 +180,9 @@
 10. Now deploy the configuration to AWS
 ```terraform apply -auto-approve```
 11. You should see terraform working through the configuration elements and you can also follow the infrastructure spinning up in the AWS EC2 console and AWS VPC console. I recommend opening a browser window/tab for each
-12. Once apply has completed identify the public_dns name the terraform apply command (or use "terraform show | grep public_dns") or go through the EC2 console to get public_dns from the Instances menu
+12. Once apply has completed identify the public_dns name the terraform apply command (or use "terraform show | grep public_dns" if you are using the Git bash terminal) or go through the EC2 console to get public_dns from the Instances menu
 13. Try ssh'ing into the EC2 instance
-`ssh -i ~/.ssh/iac_demo.pem ubuntu@<public_dns>`
+```ssh -i ~/.ssh/iac_demo.pem ubuntu@<public_dns>```
 14. In the Packer lab we created an image that has the nginx web server installed by default, to test this when logged into the instance run the following command. You should see wget save the file to index.html
 ```wget localhost```
 15. Now if you try to wget the public_dns name from a local terminal, you should see it fail because port 80 has not been declared in the Inbound rules of the EC2 security group "sg_iac_demo"
