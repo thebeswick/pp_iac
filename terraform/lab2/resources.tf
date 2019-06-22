@@ -38,9 +38,6 @@ resource "aws_volume_attachment" "iac_vol_attachment" {
 resource "aws_internet_gateway" "ig_iac_demo" {
   vpc_id = "${aws_vpc.vpc_iac_demo.id}"
 
-  tags = {
-    Name = "ig_iac_demo"
-  }
 }
 # Create the VPC resource - VPN console
 resource "aws_vpc" "vpc_iac_demo" {
@@ -65,10 +62,7 @@ resource "aws_route_table" "rt_iac_demo" {
   route {
     cidr_block = "10.0.0.0/0"
     gateway_id = "${aws_internet_gateway.ig_iac_demo.id}"
-  }
-  tags = {
-    Name = "rt_iac_demo"
-  }
+  } 
 }
 
 # Create the Security Group - EC2 console
